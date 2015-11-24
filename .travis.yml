@@ -1,0 +1,13 @@
+language: go
+go:
+  - 1.5
+sudo: false
+install:
+  - go get -u github.com/golang/lint/golint
+  - go get github.com/tools/godep
+  - go get github.com/GeertJohan/go.rice/rice
+
+script:
+  - make build
+
+notifications:
