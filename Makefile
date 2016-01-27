@@ -3,7 +3,7 @@ all: help
 
 build: lint
 	@echo "Building to $(GOPATH)/bin/gauntlt..."
-	@godep go build -o $($GOPATH)/bin/gauntlt ./gauntlt/main.go
+	@godep go build -o $(GOPATH)/bin/gauntlt ./gauntlt/main.go
 
 test:
 	@echo "no tests yet"
