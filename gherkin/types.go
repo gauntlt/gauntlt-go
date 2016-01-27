@@ -120,7 +120,6 @@ func (s StringData) IsTabular() bool {
 //     //     "header1": []string{"col1"},
 //     //     "header2": []string{"col2"},
 //     //   }
-
 func (t TabularData) ToMap() TabularDataMap {
 	m := TabularDataMap{}
 	if len(t) > 1 {

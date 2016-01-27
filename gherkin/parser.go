@@ -9,6 +9,7 @@ import (
 
 var reNL = regexp.MustCompile(`\r?\n`)
 
+// ParseFilename parses a filename and returns an array of attacks
 func ParseFilename(data, filename string) ([]Attack, error) {
 	lines := reNL.Split(data, -1)
 	p := parser{
@@ -26,6 +27,7 @@ func ParseFilename(data, filename string) ([]Attack, error) {
 	return p.attacks, nil
 }
 
+// Parse function parses data passed in and returns an array of attacks
 func Parse(data string) ([]Attack, error) {
 	return ParseFilename(data, "")
 }
@@ -48,7 +50,7 @@ func (p parser) err(msg string, args ...interface{}) error {
 	if p.filename == "" {
 		p.filename = "<unknown>.attack"
 	}
-	return fmt.Errorf("parse error (%s:%d): %s.",
+	return fmt.Errorf("parse error (%s:%d): %s",
 		filepath.Base(p.filename), l, fmt.Sprintf(msg, args...))
 }
 

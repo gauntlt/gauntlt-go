@@ -1,5 +1,6 @@
 package gherkin
 
+// Language represents the language
 type Language string
 
 // Translation represents the Gherkin syntax keywords in a single language.
@@ -33,15 +34,15 @@ type Translation struct {
 }
 
 const (
-	// The language code for English translations.
-	LANG_EN = Language("en")
+	// LangEN is the language code for English translations.
+	LangEN = Language("en")
 )
 
 var (
 	// Translations contains internationalized translations of the Gherkin
 	// syntax keywords in a variety of supported languages.
 	Translations = map[Language]Translation{
-		LANG_EN: Translation{
+		LangEN: {
 			Attack:     "Attack",
 			Background: "Background",
 			Scenario:   "Scenario",
