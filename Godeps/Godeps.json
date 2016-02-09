@@ -1,10 +1,15 @@
 {
 	"ImportPath": "github.com/gauntlt/gauntlt-go",
-	"GoVersion": "go1.4.2",
+	"GoVersion": "go1.5.3",
 	"Packages": [
 		"./..."
 	],
 	"Deps": [
+		{
+			"ImportPath": "github.com/codegangsta/cli",
+			"Comment": "1.2.0-197-gcf1f63a",
+			"Rev": "cf1f63a7274872768d4037305d572b70b1199397"
+		},
 		{
 			"ImportPath": "github.com/davecgh/go-spew/spew",
 			"Rev": "5215b55f46b2b919f50a1df0eaa5886afe4e3b3d"
