@@ -2,8 +2,8 @@ all: help
 	@echo "running make help"
 
 build: lint
-	@echo "Building to $(GOPATH)/bin/gauntlt..."
-	@godep go build -o $(GOPATH)/bin/gauntlt ./gauntlt/main.go
+	@echo "Building and installing to $(GOPATH)/bin/gauntlt..."
+	@godep go install ./cmd/gauntlt
 
 test:
 	@echo "no tests yet"
