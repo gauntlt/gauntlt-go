@@ -1,15 +1,12 @@
-package main
+package gauntlt
 
 import (
-	"github.com/gauntlt/gauntlt-go/Godeps/_workspace/src/github.com/codegangsta/cli"
 	"os"
+	// Use Godeps
+	"github.com/gauntlt/gauntlt-go/Godeps/_workspace/src/github.com/codegangsta/cli"
 )
 
-func main() {
-
-}
-
-func init() {
+func GauntltMain() {
 	app := cli.NewApp()
 	app.Name = "gauntlt"
 	app.Usage = "a framework for rugged testing"
