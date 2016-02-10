@@ -15,7 +15,7 @@ func ParseFilename(data, filename string) ([]Attack, error) {
 	p := parser{
 		lines:        lines,
 		attacks:      []Attack{},
-		translations: Translations[LANG_EN],
+		translations: Translations[LangEN],
 		filename:     filename,
 	}
 	if err := p.parse(); err != nil {
